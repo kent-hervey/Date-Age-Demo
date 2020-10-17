@@ -36,11 +36,11 @@ class AgeCalculatorTest {
 		
 		// Arrange
 		int birthYear = 1955;
-		int datesYear = 2000;
-		int expected = datesYear - birthYear;
+		int datesYearPassedIn = 2000;
+		int expected = datesYearPassedIn - birthYear;
 		
-		LocalDate birthDate = of(birthYear, 2, 2);
-		LocalDate datePassedIn = of(datesYear, birthDate.getMonthValue(), birthDate.getDayOfMonth() + 1);
+		LocalDate birthDate = of(birthYear, 12, 2);  //only have month and DOM once give power to test.  No need to think of current date
+		LocalDate datePassedIn = of(datesYearPassedIn, birthDate.getMonthValue(), birthDate.getDayOfMonth() + 1);
 		
 		// Act
 		int actual = calculateAge(birthDate, datePassedIn);
@@ -48,6 +48,33 @@ class AgeCalculatorTest {
 		// Assert
 		assertEquals(expected, actual);
 	}
+	
+	
+	@Test
+	public void ageReturnedIsDatePassedInMinusBirthdateMinusOneWhennDayOfDateIsBeforeDayOfBirthdate() {
+		
+		//Arrange
+		int birthYear =1985;
+		int dateYearPassedIn = 2000;
+		int expected = dateYearPassedIn - birthYear -1;
+		
+		LocalDate birthDate = of(birthYear, 12, 2);
+		LocalDate datePassedIn = of(dateYearPassedIn, birthDate.getMonthValue(), birthDate.getDayOfMonth() -1);
+		
+		// Act
+		int actual = calculateAge(birthDate, datePassedIn);
+		
+		//Assert
+		assertEquals(expected, actual);
+		
+		
+		
+		
+	}
+	
+	
+	
+	
 	
 	
 	
