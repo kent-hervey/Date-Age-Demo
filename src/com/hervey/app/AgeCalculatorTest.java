@@ -1,5 +1,7 @@
 package com.hervey.app;
 
+import static com.hervey.app.AgeCalculator.calculateAge;
+import static java.time.LocalDate.of;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -7,9 +9,7 @@ import java.time.LocalDate;
 import java.time.Month;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
-import static com.hervey.app.AgeCalculator.calculateAge;
-import static java.time.LocalDate.of;
+import org.junit.Test;
 
 
 class AgeCalculatorTest {
