@@ -1,4 +1,4 @@
-package com.hervey.app;
+package test.com.hervey.app;
 
 import static com.hervey.app.AgeCalculator.calculateAge;
 import static java.time.LocalDate.of;
@@ -11,11 +11,13 @@ import java.time.Month;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.hervey.app.AgeCalculator;
 
-class AgeCalculatorTest {
+
+public class AgeCalculatorTest {
 
 	@Test
-	void test() {
+	public void test() {
 		fail("Not yet implemented");
 	}
 	
@@ -26,7 +28,7 @@ class AgeCalculatorTest {
 		LocalDate currentDate = LocalDate.now();
 		int expectedAgeResult = 15+20; //for 2020
 		int actual = AgeCalculator.calculateAge(birthdatePassedIn, currentDate);
-		System.out.println(actual);
+		//System.out.println(actual);
 		Assert.assertEquals(expectedAgeResult, actual);
 		
 	}
