@@ -18,6 +18,10 @@ public class DateAgeDemoApp {
 		int theAge2 = AgeCalculator.calculateAge(localDate3, currentDate);
 		System.out.println("Age using passed in arguments is:  " + theAge2);
 		
+		LocalDateMethods.DemoGets();
+		
+		YearMethods.demoYear();
+		
 
 	}
 

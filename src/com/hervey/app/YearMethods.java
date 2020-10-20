@@ -12,6 +12,8 @@ public class YearMethods {
 	System.out.println("instance of year:  " + Year.of(1960));
 	
 	String stringOfYear = Year.of(1960).toString();
+	
+	System.out.println("String version of Year " + stringOfYear);
 	}
 
 }
