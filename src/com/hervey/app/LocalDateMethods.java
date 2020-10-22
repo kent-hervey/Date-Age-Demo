@@ -28,7 +28,7 @@ public class LocalDateMethods {
 		System.out.println("Length of this year in days is:  " + sampleDate.lengthOfYear());	
 		System.out.println("year consumed to this sampleDate is:  " + ((double)  sampleDate.getDayOfYear()/sampleDate.lengthOfYear()));
 
-
+		System.out.println("Day of month of this sampleDate is:  " + sampleDate.getDayOfMonth());
 		
 	}
 
