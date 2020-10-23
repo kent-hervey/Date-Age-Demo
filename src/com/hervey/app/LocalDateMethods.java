@@ -5,7 +5,9 @@ package com.hervey.app;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.Year;
+import java.time.ZoneId;
+import java.util.Arrays;
+import java.util.Set;
 
 /**Exercises various LocalDate methods
  * @author Kent
@@ -29,6 +31,18 @@ public class LocalDateMethods {
 		System.out.println("year consumed to this sampleDate is:  " + ((double)  sampleDate.getDayOfYear()/sampleDate.lengthOfYear()));
 
 		System.out.println("Day of month of this sampleDate is:  " + sampleDate.getDayOfMonth());
+		int zoneIDOffset = -2;
+		Set<String> zoneAvailableZoneIds = ZoneId.getAvailableZoneIds();
+		
+		System.out.println("System default time zone is:  " + ZoneId.systemDefault());
+		
+		for(String zoneId: zoneAvailableZoneIds) {
+			System.out.println("Here is a Zone ID:  " + zoneId.toString());
+		}
+		
+		ZoneId zoneIDChicago = ZoneId.of("America/Chicago");
+		
+		System.out.println("LocalDate using offset of " + LocalDate.now(zoneIDChicago));
 		
 	}
 
